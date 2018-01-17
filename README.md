@@ -15,3 +15,5 @@ If `sudo make install` has been used, it would run if you type:
 
 Keep in mind that this program is based on Fermat's Primality Test and is not very accurate. I am still working on ways that can improve the accuracy of this function.
 The prime.h library also has some (extra) functions that you might like to try and are very usefull. I haven't used most of them because they were increasing the speed at which it checks the nunmber but they can still be modified to get better results.
+
+Note: The makefile uses GNU make format wildcards, therefore in some BSD systems it would potentially not compile properly. I am trying to figure out a way to make it more cross platform so that this works in most `*nix` systems.
