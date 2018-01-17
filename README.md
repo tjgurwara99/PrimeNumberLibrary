@@ -5,9 +5,9 @@ value.
 
 To execute the command type:
 
-./fermatprime `<number>`
+`./fermatprime <number>`
 
-where <number> is the number that you want to check.
+where `<number>` is the number that you want to check.
 
 Keep in mind that this program is based on Fermat's Primality Test and is not very accurate. I am still working on ways that can improve the 
 accuracy of this function.
