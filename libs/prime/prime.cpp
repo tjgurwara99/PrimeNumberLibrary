@@ -1,8 +1,10 @@
 #include<cstdlib>
 #include<vector>
 #include"prime.h"
+#include<boost/multiprecision/cpp_int.hpp>
+#define cpp_int boost::multiprecision::cpp_int
 
-long long GCD(long long a, long long b){
+cpp_int GCD(cpp_int a, cpp_int b){
         while(true){
                 if(a<b){
                         b = b%a;
@@ -25,36 +27,37 @@ long long GCD(long long a, long long b){
         }
 }
 
-long long pow(long long a, long long b){
-	long long result=1;
-	for(long long i=1; i<=b;i++){
+cpp_int pow(cpp_int a, cpp_int b){
+	cpp_int result=1;
+	for(cpp_int i=1; i<=b;i++){
 		result *= a;
 	}
 	return result;
 } 
 
-std::vector <int> BinaryK(unsigned long long k)
+std::vector <cpp_int> BinaryK( cpp_int k)
 {
-    std::vector<int> K; 
-    int tmp = k;
+    std::vector<cpp_int> K; 
+    cpp_int tmp = k;
+    cpp_int n = 2;
     while (tmp > 0)
     {
-        K.push_back(tmp % 2);
-        tmp = tmp / 2;
+        K.push_back(tmp % n);
+        tmp = tmp / n;
     }
 
     return K;
 }
 
-unsigned long long ModularExpo(unsigned long long a, std::vector<int> & K, unsigned long long n)
+ cpp_int ModularExpo( cpp_int a, std::vector<cpp_int> & K,  cpp_int n)
 {
     if (n == 1)
         return 0;
 
-    int b = 1;
+    cpp_int b = 1;
     if (K.size() == 0)
         return b;
-    int A = a;
+    cpp_int A = a;
     if (K[0] == 1)
         b = a;
 
@@ -67,26 +70,26 @@ unsigned long long ModularExpo(unsigned long long a, std::vector<int> & K, unsig
     return (b);
 }
 
-long long modpow(long long base, long long exponent, long long modulus){
+cpp_int modpow(cpp_int base, cpp_int exponent, cpp_int modulus){
 	if(modulus == 1)
 		return 0;
-	long long mod = 1;
-	for(long long i=1;i<=exponent;i++){
+	cpp_int mod = 1;
+	for(cpp_int i=1;i<=exponent;i++){
 		mod = (mod*base)%modulus;
 	}
 	return mod;
 }
 
-bool fermatprime(unsigned long long a){
-	unsigned long long random;
+bool fermatprime( cpp_int a){
+	cpp_int random;
 	random = rand() % (a-1) ;
 	random++;
-	std::vector<int> v = BinaryK(a-1);
+	std::vector<cpp_int> v = BinaryK(a-1);
 	if(GCD(random, a) != 1){
 		return false;
 	}
 	else{
-		unsigned long long p = ModularExpo(random, v, a);
+		 cpp_int p = ModularExpo(random, v, a);
 		if(p == 1){
 			random = rand() % (a-1);
 			random++;

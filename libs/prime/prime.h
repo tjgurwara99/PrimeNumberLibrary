@@ -1,18 +1,20 @@
 #pragma once
 #include<bitset>
+#include<boost/multiprecision/cpp_int.hpp>
 #include<string>
 #include<vector>
+#define cpp_int boost::multiprecision::cpp_int
 
-std::vector <int> BinaryK(unsigned long long); //convertion of long to binary
+std::vector <cpp_int> BinaryK(cpp_int); //convertion of long to binary
 
-unsigned long long ModularExpo(unsigned long long, std::vector<int> &K, unsigned long long n); //modular exponentiations optimised using binary
+ cpp_int ModularExpo(cpp_int , std::vector<cpp_int> &K, cpp_int n); //modular exponentiations optimised using binary
 
-long long GCD(long long, long long); // greatest common divisor
+cpp_int GCD(cpp_int, cpp_int); // greatest common divisor
 
-long long pow(long long, long long); //raising to the power
+cpp_int pow(cpp_int, cpp_int); //raising to the power
 
-long long modpow(long long, long long, long long);  //modular exponentiation - binary function independant
+cpp_int modpow(cpp_int, cpp_int, cpp_int);  //modular exponentiation - binary function independant
 
-bool fermatprime(unsigned long long); // fermat's primality test
+bool fermatprime(cpp_int); // fermat's primality test
 
 
