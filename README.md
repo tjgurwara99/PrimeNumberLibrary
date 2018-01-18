@@ -1,14 +1,13 @@
 # PrimeNumberLibrary
----
 
-#Prerequisites
+##Prerequisites
 
 This program uses the Boost libraries multiprecision integers and therefore it requires you to download boost using either your package manager 
 or source code.
 
 If you want to use your package manager to install try one of these commands based on your distribution.
 
-##Arch-linux
+###Arch-linux
 `sudo pacman -S boost` 
 
 NOTE: If you are having trouble installing boost, you might want to check if the maintainers have changed the name of the package.
@@ -16,16 +15,15 @@ You can do this by typing
 `sudo pacman -Ss boost`
 This will list all the packages related to boost.
 
-##Ubuntu
+###Ubuntu
 `sudo apt-get install boost`
 
 NOTE: If you are having trouble installing boost, you might want to check if the maintainers have changed the name of the package.
 You can do this by typing 
 `apt-cache search boost`
 This will list all the packages related to boost.
----
 
-#Compilation
+##Compilation
 
 This makefile will compile and create an executable file called fermatprime in the current directory by default. If you want to make this into 
 a systemwide command, type `sudo make install` if you have root privileges, if not contact your system administrator. Once done, the executable will be copied to `/usr/local/bin` directory. 
