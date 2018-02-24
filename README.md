@@ -39,7 +39,7 @@ Using this command requires an argument. This argument can be arbitrarily long i
 To execute the command type with local executable type:
 
 ```
-./fermatprime <number>
+./Prime <number>
 ```
 
 where `<number>` is the number that you want to check.
@@ -47,7 +47,7 @@ where `<number>` is the number that you want to check.
 If `sudo make install` has been used, it would run if you type:
 
 ```
-fermatprime <number>
+Prime <number>
 ```
 
 Keep in mind that this program is based on Fermat's Little Theorem and is not very accurate. I am still working on ways that can improve the accuracy of this function.
