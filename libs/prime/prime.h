@@ -25,4 +25,14 @@ bool isint(cpp_bin_float_100);
 
 bool perfect_pow(cpp_int);
 
+cpp_int countFact(cpp_int n, cpp_int p);
+
+cpp_int InverseEuler(cpp_int n, cpp_int MOD);
+
+cpp_int factMOD(cpp_int n, cpp_int MOD);
+
+cpp_int nCrModP(cpp_int n, cpp_int r, cpp_int MOD);
+
+bool isPrime(cpp_int p);
+
 #endif

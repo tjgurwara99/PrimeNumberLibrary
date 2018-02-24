@@ -2,12 +2,12 @@ LIBS=$(wildcard libs/*)
 INCLUDE_PATH=libs/
 
 build: libraries
-	c++ main.cpp $(wildcard libraries/*) -I$(INCLUDE_PATH) -o fermatprime
-	chmod +x fermatprime
+	c++ main.cpp $(wildcard libraries/*) -I$(INCLUDE_PATH) -o Prime 
+	chmod +x Prime
 
 install: libraries
-	c++ main.cpp $(wildcard libraries/*) -I$(INCLUDE_PATH) -o fermatprime
-	chmod +x fermatprime
+	c++ main.cpp $(wildcard libraries/*) -I$(INCLUDE_PATH) -o Prime
+	chmod +x Prime
 	cp fermatprime /usr/local/bin
 
 libraries:
@@ -21,4 +21,4 @@ libraries:
 	done
 
 clean:
-	rm -rf libraries/ fermatprime
+	rm -rf libraries/ Prime
