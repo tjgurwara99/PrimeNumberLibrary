@@ -70,6 +70,19 @@ cpp_int ModularExpo( cpp_int a, std::vector<cpp_int> & K,  cpp_int n)
     return (b);
 }
 
+cpp_bin_float_100 sqrt(cpp_int n){
+  cpp_bin_float_100 x(n);
+  cpp_bin_float_100 temp(n);
+  cpp_bin_float_100 y = 1;
+  cpp_bin_float_100 e = 0.1;
+  while(x - y > e){
+    x = (x + y)/2;
+    y = temp/x;
+  }
+  return x;
+}
+
+
 cpp_int modpow(cpp_int base, cpp_int exponent, cpp_int modulus){
 	if(modulus == 1)
 		return 0;
@@ -167,6 +180,23 @@ bool isPrime(cpp_int p)
         flag = nCrModP(p, i, p);
         if(flag != 0)
           return false;
+    }
+    return true;
+  }
+}
+
+bool isPrimeGCD(cpp_int p)
+{
+  if(p % 2 == 0){
+    std::cout<<p<<" is not a prime.\n";
+  }
+  else{
+    cpp_int flag = 1;
+    cpp_int nn(sqrt(p));
+    for(cpp_int i = 2; i < nn ;++i){
+      flag = GCD(p, i);
+      if(flag != 1)
+        return false;
     }
     return true;
   }

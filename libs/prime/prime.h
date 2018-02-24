@@ -13,6 +13,8 @@ std::vector <cpp_int> BinaryK(cpp_int); //convertion of long to binary
 
 cpp_int ModularExpo(cpp_int , std::vector<cpp_int> &K, cpp_int n); //modular exponentiations optimised using binary
 
+cpp_bin_float_100 sqrt(cpp_int n);
+
 cpp_int GCD(cpp_int, cpp_int); // greatest common divisor
 
 cpp_int pow(cpp_int, cpp_int); //raising to the power
@@ -35,4 +37,5 @@ cpp_int nCrModP(cpp_int n, cpp_int r, cpp_int MOD);
 
 bool isPrime(cpp_int p);
 
+bool isPrimeGCD(cpp_int p);
 #endif

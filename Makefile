@@ -21,4 +21,4 @@ libraries:
 	done
 
 clean:
-	rm -rf libraries/ Prime
+	rm -rf libraries/ Prime libs/prime/prime.h.gch

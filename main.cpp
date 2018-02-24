@@ -9,7 +9,7 @@ int main(int argc, char** argv){
                 cpp_int n;
                 std::istringstream iss( argv[1]);
                 if(iss >> n){
-                        if(isPrime(n))
+                        if(isPrimeGCD(n))
 					std::cout << n << " number is probably prime.\n";
 			else{
 				//printf("%lld number is not a prime.\n", n);
