@@ -50,6 +50,11 @@ If `sudo make install` has been used, it would run if you type:
 fermatprime <number>
 ```
 ---
+## Maths in this program
+
+If you are interested in maths behind the functions, please take a look at MathsBehind file. This file was created using Jupyter-notebook, and can be run online within this interface. Just click on it and you are good to go.
+
+---
 
 Keep in mind that this program is based on Fermat's Little Theorem and is not very accurate. I am still working on ways that can improve the accuracy of this function.
 The prime.h library also has some (extra) functions that you might like to try and are very usefull. I haven't used most of them because they 
