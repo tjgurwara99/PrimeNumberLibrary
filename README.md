@@ -50,6 +50,19 @@ If `sudo make install` has been used, it would run if you type:
 fermatprime <number>
 ```
 
+## Maths Behind the Scenes
+
+By Fermat's Little Theorem, we know that:
+
+$ a^p-1 \equiv 1 \mod p $     where   $ p \in Prime $ for all $ a \in \mathbb{N} $
+
+The main function calls the function fermatprime() from the prime.h library. This Function uses 3 random numbers generated as our $a$'s in an iterative process. This increases the probability of the number being a prime if it passes through all three iterations. 
+
+Since, we will be testing arbitarily large numbers, I had to resort to using Modular exponentiation, which drastically reuced the time it took to calculate the modulo. There are several prototypes of the modular exponentiation function in the prime.h library. 
+
+
+ 
+
 Keep in mind that this program is based on Fermat's Little Theorem and is not very accurate. I am still working on ways that can improve the accuracy of this function.
 The prime.h library also has some (extra) functions that you might like to try and are very usefull. I haven't used most of them because they 
 were reducing the speed at which it checks the number but they can still be modified to get better results.
