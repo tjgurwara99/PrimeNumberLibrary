@@ -54,7 +54,7 @@ fermatprime <number>
 
 By Fermat's Little Theorem, we know that:
 
-$ a^p-1 \equiv 1 \mod p $     where   $ p \in Prime $ for all $ a \in \mathbb{N} $
+$$ a^p-1 \equiv 1 \mod p $     where   $ p \in Prime $ for all $ a \in \mathbb{N} $$
 
 The main function calls the function fermatprime() from the prime.h library. This Function uses 3 random numbers generated as our $a$'s in an iterative process. This increases the probability of the number being a prime if it passes through all three iterations. 
 
